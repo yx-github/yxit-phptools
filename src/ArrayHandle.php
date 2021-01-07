@@ -1,4 +1,5 @@
 <?php
+
 namespace YxTools;
 
 class ArrayHandle
@@ -11,7 +12,7 @@ class ArrayHandle
      * @param string $type
      * @return void
      */
-    public static function sortt($data = [], $key = 'score',$type='asc')
+    public static function sortt($data = [], $key = 'score', $type = 'asc')
     {
         if (count($data) <= 1) {
             return $data;
@@ -19,14 +20,14 @@ class ArrayHandle
         $tem = $data[0][$key];
         $leftarray = array();
         $rightarray = array();
-        for ($i = 1; $i < count($data); $i ++) {
-            if($type=='asc'){
+        for ($i = 1; $i < count($data); $i++) {
+            if ($type == 'asc') {
                 if ($data [$i][$key] >= $tem) {
                     $rightarray[] = $data[$i];
                 } else {
                     $leftarray[] = $data[$i];
                 }
-            }else{
+            } else {
                 if ($data [$i][$key] <= $tem) {
                     $rightarray[] = $data[$i];
                 } else {
