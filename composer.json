@@ -1,0 +1,20 @@
+{
+    "name": "yxit/phptools",
+    "description": "phptools",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yx",
+            "email": "441053464@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "YxTools\\": "src/"
+        }
+    }
+
+}
