@@ -36,8 +36,8 @@ class ArrayHandle
             }
 
         }
-        $rightarray = self::sortt2($rightarray, $key);
-        $leftarray = self::sortt2($leftarray, $key);
+        $rightarray = self::sortt($rightarray, $key);
+        $leftarray = self::sortt($leftarray, $key);
         $sortarray = array_merge($leftarray, array($data[0]), $rightarray);
         return $sortarray;
     }
