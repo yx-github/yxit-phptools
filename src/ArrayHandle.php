@@ -86,4 +86,24 @@ class ArrayHandle
         }
         return $tree;
     }
+
+
+
+
+    /**
+     * 获取数据树子ID
+     * @param array $list 数据列表
+     * @param int $id 起始ID
+     * @param string $key 子Key
+     * @param string $pkey 父Key
+     * @return array
+     */
+    public static function getArrSubIds($list, $id = 0, $key = 'id', $pkey = 'pid')
+    {
+        $ids = [intval($id)];
+        foreach ($list as $vo) if (intval($vo[$pkey]) > 0 && intval($vo[$pkey]) === intval($id)) {
+            $ids = array_merge($ids, self::getArrSubIds($list, intval($vo[$key]), $key, $pkey));
+        }
+        return $ids;
+    }
 }
